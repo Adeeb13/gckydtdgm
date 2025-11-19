@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KaziMahirAdeeb - Ethical AI Architect & Global Policy Scholar</title>
+    <meta name="description" content="KaziMahirAdeeb is a Structured Ethical AI Architect and Global Policy Scholar specializing in Constraint-Based Autonomy, quantum computing theory, and UN-aligned AI policy. Queen's Commonwealth Essay Gold Award winner.">
+    <meta name="keywords" content="KaziMahirAdeeb, Ethical AI, AI Architect, Quantum Computing, Policy Scholar, Constraint-Based Autonomy">
+    <meta name="author" content="Kazi Mahir Adeeb">
+    <meta property="og:title" content="KaziMahirAdeeb - Ethical AI Architect">
+    <meta property="og:description" content="Structured Ethical AI Architect specializing in Constraint-Based Autonomy and UN-aligned AI policy.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KaziMahirAdeeb - Ethical AI Architect">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #0f1a3d 50%, #050812 100%);
+            color: #e2e8f0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Universe Background Canvas */
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Custom Cursor */
+        * {
+            cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="8" fill="%2364b5f6" opacity="0.6"/><circle cx="16" cy="16" r="4" fill="%2364b5f6"/></svg>') 16 16, auto;
+        }
+
+        a, button {
+            cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="10" fill="%2364b5f6" opacity="0.8"/><circle cx="16" cy="16" r="6" fill="%2364b5f6"/></svg>') 16 16, pointer;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+            background: rgba(15, 23, 42, 0.2);
+            border-bottom: 1px solid rgba(71, 85, 105, 0.3);
+            padding: 1rem 2rem;
+            animation: slideDown 0.6s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1.125rem;
+            transition: transform 0.3s ease;
+        }
+
+        nav .logo:hover {
+            transform: scale(1.05);
+        }
+
+        nav .logo-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #06b6d4 0%, #a855f7 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #000;
+            font-size: 0.875rem;
+        }
+
+        nav .menu {
+            display: none;
+            gap: 2rem;
+        }
+
+        nav .menu a {
+            font-size: 0.875rem;
+            text-decoration: none;
+            color: #e2e8f0;
+            transition: color 0.3s ease;
+        }
+
+        nav .menu a:hover {
+            color: #06b6d4;
+        }
+
+        @media (min-width: 768px) {
+            nav .menu {
+                display: flex;
+            }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 80px;
+            left: 40px;
+            width: 288px;
+            height: 288px;
+            background: rgba(168, 85, 247, 0.2);
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 80px;
+            right: 40px;
+            width: 288px;
+            height: 288px;
+            background: rgba(6, 182, 212, 0.2);
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: float 6s ease-in-out infinite 1s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            position: relative;
+            z-index: 10;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, #06b6d4, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero .subtitle {
+            font-size: 1.125rem;
+            color: #94a3b8;
+            margin-bottom: 3rem;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 640px) {
+            .button-group {
+                flex-direction: row;
+            }
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, #06b6d4, #a855f7);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            border: 2px solid #06b6d4;
+            color: #06b6d4;
+            background: transparent;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(6, 182, 212, 0.1);
+            transform: scale(1.05);
+        }
+
+        /* Achievement Badges */
+        .badges {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .badge {
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            background: rgba(30, 41, 59, 0.3);
+            border: 1px solid rgba(71, 85, 105, 0.5);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out backwards;
+        }
+
+        .badge:nth-child(1) { animation-delay: 0.1s; }
+        .badge:nth-child(2) { animation-delay: 0.2s; }
+        .badge:nth-child(3) { animation-delay: 0.3s; }
+        .badge:nth-child(4) { animation-delay: 0.4s; }
+
+        .badge:hover {
+            transform: translateY(-10px) scale(1.05);
+            border-color: #06b6d4;
+        }
+
+        .badge-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-label {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-value {
+            font-weight: 700;
+            color: #06b6d4;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        section h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(90deg, #06b6d4, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* About Section */
+        #about p {
+            font-size: 1.125rem;
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Research Section */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .research-card {
+            padding: 2rem;
+            border-radius: 0.5rem;
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.4) 100%);
+            border: 1px solid rgba(71, 85, 105, 0.5);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out backwards;
+        }
+
+        .research-card:nth-child(1) { animation-delay: 0.1s; }
+        .research-card:nth-child(2) { animation-delay: 0.2s; }
+        .research-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .research-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: #06b6d4;
+        }
+
+        .research-card .status {
+            font-size: 0.75rem;
+            color: #06b6d4;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .research-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #f1f5f9;
+        }
+
+        .research-card p {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        /* Awards Section */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .award-card {
+            padding: 2rem;
+            border-radius: 0.5rem;
+            background: rgba(30, 41, 59, 0.2);
+            border: 1px solid rgba(71, 85, 105, 0.5);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out backwards;
+        }
+
+        .award-card:nth-child(1) { animation-delay: 0.1s; }
+        .award-card:nth-child(2) { animation-delay: 0.2s; }
+        .award-card:nth-child(3) { animation-delay: 0.3s; }
+        .award-card:nth-child(4) { animation-delay: 0.4s; }
+
+        .award-card:hover {
+            transform: translateX(10px);
+            border-color: #a855f7;
+        }
+
+        .award-year {
+            color: #a855f7;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .award-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.3) 0%, rgba(15, 23, 42, 0.3) 100%);
+            border: 1px solid rgba(71, 85, 105, 0.5);
+            border-radius: 0.5rem;
+            padding: 3rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-group h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #06b6d4;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            color: #06b6d4;
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(71, 85, 105, 0.3);
+            color: #64748b;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            section {
+                padding: 3rem 0;
+            }
+
+            .hero {
+                padding-top: 100px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .badges {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            #contact {
+                padding: 2rem;
+            }
+
+            nav .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-circle">KM</div>
+                <span>KaziMahirAdeeb</span>
+            </div>
+            <div class="menu">
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#awards">Awards</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-icon">✨</div>
+            <h1>Kazi Mahir Adeeb</h1>
+            <p>Structured Ethical AI Architect & Global Policy Scholar</p>
+            <p class="subtitle">Blending quantum theory, constraint-based AI design, and UN-aligned governance frameworks to build research and products that matter.</p>
+            
+            <div class="button-group">
+                <a href="https://drive.google.com/file/d/1example/view?usp=sharing" class="btn btn-primary" target="_blank">Download CV</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+
+            <div class="badges">
+                <div class="badge">
+                    <div class="badge-icon">🏆</div>
+                    <div class="badge-label">Queen's Commonwealth Gold</div>
+                    <div class="badge-value">2025</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">💻</div>
+                    <div class="badge-label">TCS Scholar</div>
+                    <div class="badge-value">2025</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">🌍</div>
+                    <div class="badge-label">UNITAR & UN Laureate</div>
+                    <div class="badge-value">2026</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">📚</div>
+                    <div class="badge-label">Scholar's Laureate</div>
+                    <div class="badge-value">Immerse 2026</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <h2>About</h2>
+        <p>I merge theoretical foundations (quantum computing, physics-derived constraints) with pragmatic governance frameworks to build AI systems that are ethically bounded and resilient. I lead research on <strong style="color: #06b6d4;">Constraint-Based Autonomy</strong> — an architecture that encodes international safety norms directly into system constraints so models remain aligned while adapting.</p>
+        <p>I also mentor, teach, and engage in community work — including language teaching and outreach in Khulna — and I am exploring innovative approaches to building responsible AI tools for climate and education.</p>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="container">
+        <h2>Research & Publications</h2>
+        <div class="research-grid">
+            <div class="research-card">
+                <div class="status">Under peer review</div>
+                <h3>Conceptual Framework for a Self-Evolving Machine</h3>
+                <p>A theoretical manuscript introducing Constraint-Based Autonomy and proposals for ethically bounded self-optimization.</p>
+            </div>
+            <div class="research-card">
+                <div class="status">Co-Authored</div>
+                <h3>Universal Basic Mass Density</h3>
+                <p>A cross-disciplinary investigation into astrophysical density concepts and philosophical implications.</p>
+            </div>
+            <div class="research-card">
+                <div class="status">Published</div>
+                <h3>Monomoussumi: Selected Essays</h3>
+                <p>Nutrition, entertainment, and cultural identity essays published in Monomoussumi International.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="container">
+        <h2>Awards & Recognition</h2>
+        <div class="awards-grid">
+            <div class="award-card">
+                <div class="award-year">2025</div>
+                <div class="award-title">Queen's Commonwealth Essay Competition — Gold</div>
+            </div>
+            <div class="award-card">
+                <div class="award-year">2025</div>
+                <div class="award-title">Immerse Education — Scholar's Laureate</div>
+            </div>
+            <div class="award-card">
+                <div class="award-year">2025</div>
+                <div class="award-title">The Knowledge Society — Scholar</div>
+            </div>
+            <div class="award-card">
+                <div class="award-year">2025</div>
+                <div class="award-title">Bangladesh AI Olympiad — Prelim Winner</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container">
+        <h2>Get in Touch</h2>
+        <div id="contact">
+            <div class="contact-grid">
+                <div class="contact-group">
+                    <h3>Contact Information</h3>
+                    <a href="mailto:thundermahir08@gmail.com" class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span>thundermahir08@gmail.com</span>
+                    </a>
+                    <a href="tel:+8801860695891" class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <span>+88 01860 695891</span>
+                    </a>
+                    <a href="https://linkedin.com/in/kazi-mahir-adeeb-62b954340/" class="contact-item" target="_blank">
+                        <span class="contact-icon">💼</span>
+                        <span>LinkedIn Profile</span>
+                    </a>
+                </div>
+                <div class="contact-group">
+                    <h3>Quick Links</h3>
+                    <a href="#about" class="contact-item">
+                        <span>→</span>
+                        <span>About Me</span>
+                    </a>
+                    <a href="#research" class="contact-item">
+                        <span>→</span>
+                        <span>Research</span>
+                    </a>
+                    <a href="#awards" class="contact-item">
+                        <span>→</span>
+                        <span>Awards</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Kazi Mahir Adeeb • Designed for the future • Built with curiosity</p>
+    </footer>
+
+    <!-- Universe Background Canvas -->
+    <script>
+        const canvas = document.createElement('canvas');
+        canvas.style.position = 'fixed';
+        canvas.style.top = '0';
+        canvas.style.left = '0';
+        canvas.style.zIndex = '-1';
+        document.body.appendChild(canvas);
+
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Particle system
+        const particles = [];
+
+        function createParticles() {
+            particles.length = 0;
+
+            // Stars
+            for (let i = 0; i < 150; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.3,
+                    vy: (Math.random() - 0.5) * 0.3,
+                    size: Math.random() * 1.5,
+                    opacity: Math.random() * 0.7 + 0.3,
+                    color: `hsl(${Math.random() * 60 + 200}, 100%, ${Math.random() * 30 + 60}%)`,
+                    type: 'star',
+                });
+            }
+
+            // Dust particles
+            for (let i = 0; i < 200; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.1,
+                    vy: (Math.random() - 0.5) * 0.1,
+                    size: Math.random() * 0.5,
+                    opacity: Math.random() * 0.3 + 0.1,
+                    color: `hsl(${Math.random() * 40 + 260}, 80%, 50%)`,
+                    type: 'dust',
+                });
+            }
+
+            // Nebula particles
+            for (let i = 0; i < 50; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.05,
+                    vy: (Math.random() - 0.5) * 0.05,
+                    size: Math.random() * 100 + 50,
+                    opacity: Math.random() * 0.15 + 0.05,
+                    color: `hsl(${Math.random() * 60 + 240}, 100%, 50%)`,
+                    type: 'nebula',
+                });
+            }
+        }
+
+        createParticles();
+
+        function animate() {
+            // Clear canvas with gradient
+            const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+            gradient.addColorStop(0, '#0a0e27');
+            gradient.addColorStop(0.5, '#0f1a3d');
+            gradient.addColorStop(1, '#050812');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw nebula glow
+            particles.forEach((p) => {
+                if (p.type === 'nebula') {
+                    const nebula = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size);
+                    nebula.addColorStop(0, `hsla(${Math.random() * 60 + 240}, 100%, 50%, ${p.opacity})`);
+                    nebula.addColorStop(1, `hsla(${Math.random() * 60 + 240}, 100%, 50%, 0)`);
+                    ctx.fillStyle = nebula;
+                    ctx.fillRect(p.x - p.size, p.y - p.size, p.size * 2, p.size * 2);
+                }
+            });
+
+            // Update and draw particles
+            particles.forEach((p) => {
+                p.x += p.vx;
+                p.y += p.vy;
+
+                // Wrap around screen
+                if (p.x < 0) p.x = canvas.width;
+                if (p.x > canvas.width) p.x = 0;
+                if (p.y < 0) p.y = canvas.height;
+                if (p.y > canvas.height) p.y = 0;
+
+                // Draw particle
+                if (p.type === 'star') {
+                    ctx.fillStyle = p.color;
+                    ctx.globalAlpha = p.opacity;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    // Star glow
+                    ctx.strokeStyle = p.color;
+                    ctx.lineWidth = 0.5;
+                    ctx.globalAlpha = p.opacity * 0.3;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.size * 2, 0, Math.PI * 2);
+                    ctx.stroke();
+                } else if (p.type === 'dust') {
+                    ctx.fillStyle = p.color;
+                    ctx.globalAlpha = p.opacity;
+                    ctx.fillRect(p.x, p.y, p.size, p.size);
+                }
+            });
+
+            ctx.globalAlpha = 1;
+
+            // Draw shooting stars occasionally
+            if (Math.random() < 0.002) {
+                const startX = Math.random() * canvas.width;
+                const startY = Math.random() * canvas.height;
+                const length = Math.random() * 100 + 50;
+                const angle = Math.random() * Math.PI * 2;
+
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(startX, startY);
+                ctx.lineTo(
+                    startX + Math.cos(angle) * length,
+                    startY + Math.sin(angle) * length
+                );
+                ctx.stroke();
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // JSON-LD for SEO
+        const ldJson = {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Kazi Mahir Adeeb",
+            "alternateName": "KaziMahirAdeeb",
+            "url": "https://kazimahiradeeb.com",
+            "jobTitle": "Structured Ethical AI Architect & Global Policy Scholar",
+            "email": "thundermahir08@gmail.com",
+            "sameAs": [
+                "https://linkedin.com/in/kazi-mahir-adeeb-62b954340/",
+                "https://instagram.com/kazimahiradeeb"
+            ],
+            "description": "Structured Ethical AI Architect specializing in Constraint-Based Autonomy, quantum computing theory, and UN-aligned AI policy."
+        };
+
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.innerHTML = JSON.stringify(ldJson);
+        document.head.appendChild(script);
+    </script>
+</body>
+</html>
